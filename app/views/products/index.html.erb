@@ -1,7 +1,8 @@
-
+<div class="container" style="padding-top: 100px">
   <% @products.each do |product| %>
     <div class="col-md-4">
       <p><%= link_to product.name, product_path(product) %></p>
       <p><%= product.description %></p>
     </div>
   <% end %>
+</div>

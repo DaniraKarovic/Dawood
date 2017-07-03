@@ -1,18 +1,14 @@
-<div class="navbar navbar-default navbar-fixed-top opaque-navbar">
-  <div class="container-fluid">
+<div class="navbar navbar-inverse navbar-fixed-top opaque-navbar">
+  <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navMain">
-  <span class="glyphicon glyphicon-chevron-right" style="color:white;"></span>
-
-  </button>
-      <a class="navbar-brand" href="#">Dawood eyewear</a>
+    <%= image_tag 'vii.png', :class => "brand" %>
     </div>
-    <div class="collapse navbar-collapse" id="navMain">
-      <ul class="nav navbar-nav pull-left">
+    <!-- <div class="collapse navbar-collapse" id="navMain"> -->
+      <ul class="nav navbar-nav pull-right">
         <li class="<%= 'active' if params[:controller]=='home' && params[:action] == 'index' %>"><%= link_to 'Home', root_path %></li>
         <li class="<%= 'active' if params[:controller]=='products' %>"><%= link_to 'Products', products_path %></li>
         <li class="<%= 'active' if params[:action] == 'contact' %>"><%= link_to 'Contact', contact_path %></li>
       </ul>
     </div>
   </div>
-</div>
+<!-- </div> -->
