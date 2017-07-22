@@ -5,5 +5,8 @@
     <br>
     <p><strong>Description:</strong></p>
     <p><%= @product.description %></p>
+    <% @product.pictures.each do |p| %>
+      <%= image_tag p.url %>
+    <% end %>
   </div>
 </div>

@@ -13,6 +13,9 @@
       <%= form.text_area :description, class: 'form-control' %>
       <%= error_for :description, @product.errors %>
       <br>
+      <%= form.label :pictures %>
+      <%= form.file_field :pictures, multiple: true %>
+      <br>
       <%= form.submit params[:action] == 'new' ? 'Save' : 'Update', class: 'btn btn-block btn-default' %>
     <% end %>
   </div>

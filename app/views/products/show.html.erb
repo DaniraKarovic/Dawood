@@ -1,1 +1,14 @@
-<%= @product.name %>
+<div class="row">
+  <div class="col-md-6">
+    <% @product.pictures.each do |p| %>
+      <%= image_tag p.url, class: 'img-responsive product-show' %>
+    <% end %>
+  </div>
+  <div class="col-md-6">
+    <p><strong>Name:</strong></p>
+    <p><%= @product.name %></p>
+    <br>
+    <p><strong>Description:</strong></p>
+    <p><%= @product.description %></p>
+  </div>
+</div>
