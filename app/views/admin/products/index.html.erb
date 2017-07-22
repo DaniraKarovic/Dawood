@@ -1,0 +1,26 @@
+<div class="forma_log_in">
+<div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="ravnanje">
+          <h1>Products <%= link_to 'Create new', new_admin_product_path, class: 'btn btn-primary' %></h1>
+          <br>
+        </div>
+        <h3 class="naslovni-tekst">Products details</h3>
+      </div>
+
+      <table class="table table-bordered jumbotron">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <%= render @products %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+</div>
