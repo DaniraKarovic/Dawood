@@ -1,3 +1,50 @@
+.navbar {
+  color: #292C2F;
+}
+
+
+.prvi-tekst {
+  text-align: center;
+  padding: 30px 320px;
+  background-color: #292C2F;
+  color: white;
+  height: 200px;
+}
+
+.odlike {
+  text-align: left;
+  background-color: #292C2F;
+  color: white;
+  padding: 20px 20px;
+}
+
+.opis {
+  text-align: center;
+  height: 200px;
+  font-size: 20px;
+  padding: 30px 70px;
+  background-color: #EAE8E6;
+
+}
+
+hr.style14 {
+  border: 0;
+  height: 1px;
+  width: 400px;
+  background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+}
+
+.historija {
+  text-align: center;
+  height: 300px;
+  font-size: 20px;
+  padding: 30px 40px;
+  background-color: #EAE8E6;
+}
+
 .contact-picture {
   width: 100%;
   height: 400px;
@@ -19,27 +66,6 @@ textarea.form-control {
     height:100px;
 }
 
-.logo-picture {
- width: 320px;
- margin-right: auto;
- margin-left: auto;
- padding-top: 35px;
-}
-
-.logo-slika {
-  width: 100%;
-}
-
-.middle {
-  text-align: center;
-}
-
-.naslovni-tekst {
-  margin-left: 500px;
-  margin-right: 500px;
-  font-size: 20px;
-}
-
 .home-intro {
   margin-left: 100px;
   margin-right: 100px;
@@ -47,59 +73,28 @@ textarea.form-control {
   padding-top: 50px;
 }
 
-
-body {
-	width:100%;
-	height:100%;
-	font-family: 'Roboto Condensed', sans-serif;
+div#masonry {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 600px;
+  max-height: 800px;
+  font-size: 0;
+}
+div#masonry img {
+  width: 33.3%;
+  transition: .8s opacity;
 }
 
-h1,h2,h3 {
-	margin:0 0 35px 0;
-	font-family: 'Patua One', cursive;
-	text-transform: uppercase;
-	letter-spacing:1px;
-  color: #484848;
-}
+div#masonry:hover img { opacity: 0.3; }
+div#masonry:hover img:hover { opacity: 1; }
 
-.logo-picture {
-   width: 300px;
-}
+/* fallback for earlier versions of Firefox */
 
-p {
-	margin:0 0 25px;
-	font-size:18px;
-	line-height:1.6em;
-}
-
-@media (max-width: 766px) {
-  .navigacija {
-     position: relative;
+@supports not (flex-wrap: wrap) {
+  div#masonry { display: block; }
+  div#masonry img {
+  display: inline-block;
+  vertical-align: top;
   }
-}
-
-.carousel-fade .carousel-inner .item {
-    -webkit-transition-property: opacity;
-    transition-property: opacity;
-  }
-.carousel-fade .carousel-inner .item,
-.carousel-fade .carousel-inner .active.left,
-.carousel-fade .carousel-inner .active.right {
-    opacity: 0;
-}
-.carousel-fade .carousel-inner .active,
-.carousel-fade .carousel-inner .next.left,
-.carousel-fade .carousel-inner .prev.right {
-    opacity: 1;
-}
-.carousel-fade .carousel-inner .next,
-.carousel-fade .carousel-inner .prev,
-.carousel-fade .carousel-inner .active.left,
-.carousel-fade .carousel-inner .active.right {
-    left: 0;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-}
-.carousel-fade .carousel-control {
-    z-index: 2;
 }

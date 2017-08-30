@@ -1,14 +1,21 @@
-<div class="navbar navbar-inverse navbar-fixed-top opaque-navbar">
+<nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
-    <%= image_tag 'vii.png', :class => "brand" %>
+        <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <%= image_tag 'vii.png', :class => "brand" %>
     </div>
-    <!-- <div class="collapse navbar-collapse" id="navMain"> -->
-      <ul class="nav navbar-nav pull-right">
+    <!-- Collection of nav links, forms, and other content for toggling -->
+    <div id="navbarCollapse" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
         <li class="<%= 'active' if params[:controller]=='home' && params[:action] == 'index' %>"><%= link_to 'Home', root_path %></li>
         <li class="<%= 'active' if params[:controller]=='products' %>"><%= link_to 'Products', products_path %></li>
         <li class="<%= 'active' if params[:action] == 'contact' %>"><%= link_to 'Contact', contact_path %></li>
       </ul>
     </div>
   </div>
-<!-- </div> -->
+</nav>

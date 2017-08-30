@@ -1,44 +1,5 @@
-/***********************************************************************
-*  OPAQUE NAVBAR SECTION
-***********************************************************************/
-.opaque-navbar {
-    background-color: rgba(0,0,0,0.4);
-  /* Transparent = rgba(0,0,0,0) / Translucent = (0,0,0,0.5)  */
-    height: 65px;
-    border-bottom: 0px;
-    transition: background-color .5s ease 0s;
-    font-family: 'Roboto', sans-serif;
-    font-weight: bolder;
-    font-size: 16px;
-    padding-top: 5px;
-    color: #EEEEEE;
-
-    .active {
-      a {
-        background-color: rgba(0,0,0,0) !important;
-    }
-  }
-}
-
-.opaque-navbar.opaque {
-    background-color: #EEEEEE;
-    height: 65px;
-    transition: background-color .5s ease 0s;
-}
-
-// Dodatne stvari u headeru-----------------------
-
-    .brand {
-      width: 110px;
-      height: 40px;
-      padding-top: 15px;
-      padding-bottom: 5px;
-}
-
-    @media (max-width: 992px) {
-      .opaque-navbar {
-        background-color: rgba(0,0,0,0.5);
-        height: 60px;
-        transition: background-color .5s ease 0s;
-  }
+.brand {
+      width: 90px;
+      height: 100%;
+      margin: 10px 10px;
 }
