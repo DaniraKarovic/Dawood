@@ -11,7 +11,7 @@
    <!-- Wrapper for slides -->
    <div class="carousel-inner" role="listbox">
      <div class="item active">
-       <%= image_tag("skupina.JPG") %>
+       <%= image_tag("image040.jpg") %>
      </div>
 
      <div class="item">
@@ -41,10 +41,12 @@
    </a>
   </div>
 
-  <div class="container-fluid prvi-tekst">
+  <div class="jumbotron prvi-tekst">
     <h3> Dawood wooden eyewear stands out as an eco-friendly, completely hand crafted, all-natural product
     that will meet even the most demanding tastes.</h3>
   </div>
+
+  <%= image_tag 'skupina.JPG', :class => "firstpic" %>
 
   <div class="container-fluid historija"
     <p>History</p>
@@ -57,6 +59,8 @@
 </div>
 
 <div class="container-fluid odlike">
+  <div class="row">
+    <div class="col-md-6">
   <h3>FEATURES:</h3>
     <p>Very lightweight and durable frames</p>
     <p>High quality CR39 lenses with UV400 filter (made in Europe)</p>
@@ -64,15 +68,55 @@
     <p>Nosepads made of rosewood</p>
     <p>Finished with natural oils and bee wax</p>
     <p>Every pair comes with a genuine leather case</p>
+  </div>
+  <div class="col-md-6">
+    <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+       <!-- Indicators -->
+       <ol class="carousel-indicators">
+           <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+           <li data-target="#myCarousel" data-slide-to="1"></li>
+           <li data-target="#myCarousel" data-slide-to="2"></li>
+           <li data-target="#myCarousel" data-slide-to="3"></li>
+           <li data-target="#myCarousel" data-slide-to="4"></li>
+       </ol>
+
+       <!-- Wrapper for slides -->
+       <div class="carousel-inner" role="listbox">
+         <div class="item active">
+           <%= image_tag("profil.jpg") %>
+         </div>
+
+         <div class="item">
+              <%= image_tag("image053.jpg") %>
+         </div>
+
+         <div class="item">
+             <%= image_tag("image041.jpg") %>
+         </div>
+
+         <div class="item">
+             <%= image_tag("image033.jpg") %>
+         </div>
+         <div class="item">
+              <%= image_tag("image037.jpg") %>
+         </div>
+       </div>
+
+       <!-- Left and right controls -->
+       <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+         <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+         <span class="sr-only">Previous</span>
+       </a>
+       <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+         <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+         <span class="sr-only">Next</span>
+       </a>
+      </div>
+  </div>
+</div>
 </div>
 
-<div class="continer opis">
-  <p>Dawood is a small manufacture which, unlike in most of the mass productions, uses only air dried,
-  precious solid wood to make small quantities of the best quality wooden frames. Both domestic and
-  exotic wood types are used to create premium wooden glasses.
-  Dawood wooden glasses are made of European ash, walnut, plain and flame maple, plum, cherry, and
-  exotic species, such as padouk, sapele mahogany, zebra wood and wenge.</p>
-</div>
+
 
   <div id="masonry">
     <%= image_tag("galery1.JPG") %>
@@ -82,3 +126,12 @@
     <%= image_tag("oko.JPG") %>
     <%= image_tag("oki.JPG") %>
   </div>
+
+  <div class="continer opis">
+    <p>Dawood is a small manufacture which, unlike in most of the mass productions, uses only air dried,
+    precious solid wood to make small quantities of the best quality wooden frames. Both domestic and
+    exotic wood types are used to create premium wooden glasses.
+    Dawood wooden glasses are made of European ash, walnut, plain and flame maple, plum, cherry, and
+    exotic species, such as padouk, sapele mahogany, zebra wood and wenge.</p>
+  </div>
+  <%= image_tag 'ton.jpg', :class => "paletadrveta" %>
