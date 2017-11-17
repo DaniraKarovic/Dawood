@@ -109,3 +109,60 @@ div#masonry:hover img:hover { opacity: 1; }
   vertical-align: top;
   }
 }
+
+
+
+
+
+// okretanje
+
+
+.flip-container {
+	perspective: 1000px;
+  display: inline-block;
+}
+
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+  transform: rotateY(180deg);
+}
+
+.flip-container, .front, .back {
+	width: 320px;
+	height: 480px;
+}
+
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+.front, .back {
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+.back {
+	transform: rotateY(180deg);
+}
+
+.slika {
+  width: 320px;
+	height: 480px;
+}
+
+.tekst-opis {
+  width: 320px;
+	height: 480px;
+  background-color: grey;
+}
