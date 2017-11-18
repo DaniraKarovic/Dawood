@@ -126,9 +126,13 @@ div#masonry:hover img:hover { opacity: 1; }
   transform: rotateY(180deg);
 }
 
-.flip-container, .front, .back {
-	width: 320px;
-	height: 480px;
+.flip-container {
+	width: 19%;
+  height: 300px;
+}
+
+.front, .back {
+  width: 100%;
 }
 
 .flipper {
@@ -147,6 +151,7 @@ div#masonry:hover img:hover { opacity: 1; }
 }
 
 .front {
+  height: 300px;
 	z-index: 2;
 	/* for firefox 31 */
 	transform: rotateY(0deg);
@@ -154,15 +159,22 @@ div#masonry:hover img:hover { opacity: 1; }
 
 .back {
 	transform: rotateY(180deg);
+  background-color: #F4F4F4;
+  height: 300px;
 }
 
 .slika {
-  width: 320px;
-	height: 480px;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
 }
 
 .tekst-opis {
-  width: 320px;
-	height: 480px;
-  background-color: #F4F4F4;
+  font-size: 10px;
+  width: 100%;
+}
+
+.tekst-opis h3 {
+  margin-top: 0px;
+  padding-top: 10px;
 }

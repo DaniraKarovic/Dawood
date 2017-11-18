@@ -1,8 +1,17 @@
 <div class="container" style="padding-top: 100px">
+  <div class="product-header">
+    <p>Collection</p>
+    <hr class="style14">
+  </div>
+
   <% @products.each do |product| %>
     <div class="col-md-4">
-      <p><%= link_to product.name, product_path(product) %></p>
-      <p><%= image_tag product.pictures[0].url%></p>
+      <%= link_to product_path(product) do %>
+        <div class="product-item">
+          <p><%= image_tag product.pictures[0].url, :class => "products-image" %></p>
+          <h4><%= product.name %></h4>
+        </div>
+      <% end %>
     </div>
   <% end %>
 </div>
